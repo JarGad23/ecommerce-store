@@ -47,7 +47,11 @@ export const Summary = () => {
           <Currency value={totalPrice} />
         </div>
       </div>
-      <Button className="w-full mt-6" onClick={onCheckout}>
+      <Button
+        disabled={items.length === 0}
+        className="w-full mt-6"
+        onClick={onCheckout}
+      >
         Checkout
       </Button>
     </div>
